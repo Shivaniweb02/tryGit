@@ -1,0 +1,42 @@
+Interface Phone{
+void switchON();
+}
+class Redmi implements Phone{
+public void swtichOn(){
+}
+}
+
+abstract class Phone{
+public void myPhone(){
+
+}
+
+abstract void phoneON(){
+
+}
+
+}
+
+
+class Example{
+private name;
+public String getName(){
+return name;
+}
+pubic void setName(String name){
+this.name=name;
+}
+}
+
+
+
+
+while(n>0)
+{
+int digit=n=n%10;
+sum=sum+pow(n,size);
+n=n/10;
+}
+
+
+
