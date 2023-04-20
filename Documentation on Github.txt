@@ -1,0 +1,175 @@
+Documentation
+- Saving the changes documenting the changes at particular time and which person did the changes.
+- Many people contributing to the same project.
+- Repository is just a folder where the changes is stored.
+
+
+How do there share there changes?
+We can do this by git and github.
+
+Git (Version Control) : Git allows to maintain the history of the project and the transaction.
+Github : It is interface that allow to host our repository.
+
+
+Interface to use the Service :
+- GMAIL,yahoo
+- eg. Server and other technical backend that email have but it have interface to have better look of the mail
+that is related to github that allow us to host us repository.
+Github,bigbucket, bitlab.
+
+Basic Concept : Whatever changes we make in the directory will be made saved in the history whether we add, delete or update the fill 
+all the changes will be saved in some location.
+
+All the history that is here is stored in the Folder that is provided by the Git.
+Name of the Folder : .git folder which is Hidden.
+How do we get this folder?
+- git init
+Explanation: This means initialise any empty git folder or repository.
+Now since the folder is hidden it will not shown after running the git init.
+- ls : shows the list of file and folders
+- ls -a : shows the hidden file and folders.
+
+
+We already know that the  .git file is a hidden file and not shown usually in the folder.
+So, ls -a will show us that our folder have a hidden file.
+~~~~~~~~~~~~~~~~~~~~~~~
+$ ls .git
+HEAD  config  description  hooks/  info/  objects/  refs/
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Now every change is saved in the folder or file provided by the Git.
+.git which basically saves all the changes and provided by the Git.
+
+
+touch filename:
+touch will create a new file in the folder.
+
+This is maintained locally not globally. File changes can seen where?
+- How to check ?
+git status
+
+- the status of the project will be shown 
+- To remind not to miss any changes.
+
+Real life example:	
+Suppose you are in a wedding and you entered the wedding venue you have to click picture with
+the couple such that it will be memory that you have attended and they can check fo your wedding later.
+You entered the wedding will not be remembered for long period of time by other until the photohgraph.
+So, You will click the photograph and it will be saved for future reference.
+
+Relating to this issue :
+We have the new file no one will know until you commit it.
+To check you can see the status (git status)
+
+
+How to save to the saving folder?
+
+- git add . (staging area) to be captured.
+ 
+
+Steps 1:
+After adding the file we can list the unsaved in the .git file.
+
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        firstFile.txt
+        name,txt
+
+
+Here these two files are made after initilaization but not yet saved in the saving file.
+
+
+STEP 2:
+
+$ git add .
+This will add the file into the .git file (Staging area)
+
+
+STEP 3:
+
+Final changes made.
+
+$ git commit -m "Two files added"
+[master (root-commit) a1d2bd5] Two files added
+ 2 files changed, 5 insertions(+)
+ create mode 100644 firstFile.txt
+ create mode 100644 name,txt
+
+Now the file is added we have to commit the file that it is saved..
+-m we can add the message.
+
+
+STEP 4:
+
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Now we can see that there is no other file that has to be saved then it will show this command.
+
+
+
+TO execute the or Show the content of the file:
+- vi filename
+
+How to display the content of the file normally in the command?
+$ cat newFile.java
+
+class newFile{
+    public static void main(String[] args) {
+        System.out.println("Hello My name is Shivani ; ) ")
+    }
+}
+
+
+
+How to check if the Commit is saved or View the Saved things?
+- For viewing :
+ git log
+
+How to remove any commits?
+
+Unstage the commit.
+
+
+
+What if we have two files and we dont want to commit it.
+from the stagging area we want to save it somewhere to safe place but not commit it.
+then what will we do?
+we will use 
+- git stash
+
+such that when we have used git add . for adding the changes in the staging area then 
+after that generally we commit but here we want to store somewhere else
+- here we will use git stash
+This will get saved in the other area or memory.
+
+
+What if we want to add back the file from the stash to the repository?
+- git stash pop
+$ git stash pop
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   name
+        new file:   newnew.cpp
+
+Dropped refs/stash@{0} (b0aed428fcc2e7346dd554f6a058d92e07c0903d)
+
+Now we can commit the changes from the staging area to the final commit area.
+It will show the changes in the commit area.
+
+I got confused that if the stash will be saved but which timing will be used at the time of the
+commit the iniial add or the commit.
+Final conclusion: The file saved timing in the commit will be the actual present time of the 
+		commiting not the time of adding in the staging area.
+
+ 
+
+
+
